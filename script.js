@@ -1,42 +1,17 @@
-function convertToRoman(num) {
-    let romanNumeral = [
-      "M",
-      "CM",
-      "D",
-      "CD",
-      "C",
-      "XC",
-      "L",
-      "XL",
-      "X",
-      "IX",
-      "V",
-      "IV",
-      "I"
-    ];
-   let numEquivalent = [
-     1000,
-     900,
-     500,
-     400,
-     100,
-     90,
-     50,
-     40,
-     10,
-     9,
-     5,
-     4,
-     1
-   ]
-   let convertedRoman = "";
-   for (let i = 0; i < numEquivalent.length; i++) {
-     while (numEquivalent[i] <= num) {
-       convertedRoman += romanNumeral[i];
-       num -= numEquivalent[i];
-     }
-   }
-   return convertedRoman;
-   }
-   
-   convertToRoman(36);
+console.log('Hello')
+
+let btn = document.querySelector('.convert-btn');
+btn.addEventListener('click', () => {
+    let romanNums = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000}
+    let s = document.getElementById('num-input').value;
+    let conversion = document.querySelector('.conversion');
+    let convertedNum = 0;
+    let convertedRoman = "";
+
+    for (let i = 0; i < s.length; i++) {
+        const current = romanNums[s[i]];
+        const next = romanNums[s[i+1]];
+        (current < next) ? (convertedNum -= current) : (convertedNum += current);
+    }
+    conversion.innerHTML = convertedNum;
+})

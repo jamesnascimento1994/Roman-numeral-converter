@@ -21,11 +21,19 @@ main {
     justify-content: center;
 }
 
-#num {
+#num-input {
     padding: 2vh 4vw;
-    margin: 2vh 0;
+    margin: 5vh 0;
+    text-align: center;
 }
 
 h1 {
     font-size: 2.5rem;
+}
+
+button {
+    margin: 5vh 0;
+    padding: 2vh 4vw;
+    border-radius: 10px;
+    cursor: pointer;
 }
