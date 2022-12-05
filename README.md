@@ -7,3 +7,7 @@
 
 ## Technologies Used
 HTML, CSS, JavaScript
+
+App deployed on Netlify
+
+https://resonant-pasca-393bec.netlify.app/
