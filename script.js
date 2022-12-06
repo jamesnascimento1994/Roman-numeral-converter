@@ -1,5 +1,3 @@
-console.log('Hello')
-
 let btn = document.querySelector('.convert-btn');
 btn.addEventListener('click', () => {
     // convert roman numeral to number
@@ -15,7 +13,6 @@ btn.addEventListener('click', () => {
             conversion.innerHTML = convertedNum;
         // convert number to roman numeral 
         } else if (parseFloat(s)) {
-            console.log('inside else if');
             let convertedRoman = "";
             parsedInput = parseFloat(s);
             while (parsedInput) {
